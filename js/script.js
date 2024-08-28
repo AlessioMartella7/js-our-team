@@ -22,3 +22,27 @@ Walter Gordon |	Office Manager       |	walter-gordon-office-manager.jpg
 Angela Lopez  |	Social Media Manager |	angela-lopez-social-media-manager.jpg
 Scott Estrada |	Developer            |	scott-estrada-developer.jpg
 Barbara Ramos |	Graphic Designer     |	barbara-ramos-graphic-designer.jpg  */
+
+
+//recuperiamo gli elementi dal DOM 
+//creiamo un array
+//aggiungiamo i dati dei componenti del team al nostro array
+//stampiamo in console le informazioni sottoforma di stringa
+//stampiamo nel DOM sempre sottoforma di stringa
+
+//recuperiamo gli elementi dal DOM 
+
+const teamListField = document.getElementById('team-list');
+
+//creiamo un array
+const team = [
+    {firstName: 'Wayne', lastName: 'Barnett', role:'Founder & CEO', picture: 'wayne-barnett-founder-ceo.jpg' },
+    {firstName: 'Angela', lastName: 'Caroll ', role:'Chief Editor', picture: 'angela-caroll-chief-editor.jpg' },
+    {firstName: 'Walter', lastName: 'Gordon', role:'Office Manager', picture: 'walter-gordon-office-manager.jpg' },
+    {firstName: 'Angela', lastName: 'Lopez', role:'Social Media Manager', picture: 'angela-lopez-social-media-manager.jpg' },
+    {firstName: 'Scott', lastName: 'Estrada', role:'Developer  ', picture: 'scott-estrada-developer.jpg' },
+    {firstName: 'Barbara', lastName: 'Ramos', role:'Graphic Designer', picture: 'barbara-ramos-graphic-designer.jpg  */' },
+];
+
+
+
