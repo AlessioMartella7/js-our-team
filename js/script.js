@@ -26,7 +26,6 @@ Barbara Ramos |	Graphic Designer     |	barbara-ramos-graphic-designer.jpg  */
 
 //recuperiamo gli elementi dal DOM 
 //creiamo un array
-//aggiungiamo i dati dei componenti del team al nostro array
 //stampiamo in console le informazioni sottoforma di stringa
 //stampiamo nel DOM sempre sottoforma di stringa
 
@@ -36,6 +35,8 @@ const teamListField = document.getElementById('team-list');
 
 //creiamo un array
 const team = [
+
+    //aggiungiamo i dati dei componenti del team al nostro array
     {firstName: 'Wayne', lastName: 'Barnett', role:'Founder & CEO', picture: 'wayne-barnett-founder-ceo.jpg' },
     {firstName: 'Angela', lastName: 'Caroll ', role:'Chief Editor', picture: 'angela-caroll-chief-editor.jpg' },
     {firstName: 'Walter', lastName: 'Gordon', role:'Office Manager', picture: 'walter-gordon-office-manager.jpg' },
@@ -44,5 +45,13 @@ const team = [
     {firstName: 'Barbara', lastName: 'Ramos', role:'Graphic Designer', picture: 'barbara-ramos-graphic-designer.jpg  */' },
 ];
 
+//stampiamo in console le informazioni sottoforma di stringa
 
+for(let i = 0 ; i < team.length ; i++) {
+    let teamMember = team[i];
+    console.log(` 
+        ${teamMember.picture}
+        ${teamMember.firstName} ${teamMember.lastName}
+        Role : ${teamMember.role} `);
+}
 
