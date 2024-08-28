@@ -35,6 +35,7 @@ Barbara Ramos |	Graphic Designer     |	barbara-ramos-graphic-designer.jpg  */
 //recuperiamo gli elementi dal DOM 
 
 const teamListField = document.getElementById('team-list');
+console.log(teamListField)
 
 //# Elaboration Phase
 
