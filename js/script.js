@@ -83,8 +83,7 @@ for(let i = 0 ; i < team.length ; i++) {
         </li> `;
         
     }
-    
-    console.log(items)
+
     //# Output Phase
     //stampiamo nel DOM sempre sottoforma di stringa
     teamListField.innerHTML = items;
