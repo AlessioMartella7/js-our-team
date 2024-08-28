@@ -35,7 +35,7 @@ Barbara Ramos |	Graphic Designer     |	barbara-ramos-graphic-designer.jpg  */
 //recuperiamo gli elementi dal DOM 
 
 const teamListField = document.getElementById('team-list');
-console.log(teamListField)
+
 
 //# Elaboration Phase
 
@@ -79,7 +79,7 @@ for(let i = 0 ; i < team.length ; i++) {
         <li>
             <h3> ${fullname} </h3>
             <h4> Ruolo: ${memberRole} </h4>
-            <h5> ${memberPicture} </h5>
+            <img src= "../img/${memberPicture}" alt ="${fullname} - picture ">
         </li> `;
         
     }
