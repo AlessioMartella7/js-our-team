@@ -47,7 +47,7 @@ const team = [
     {firstName: 'Walter', lastName: 'Gordon', role:'Office Manager', picture: 'walter-gordon-office-manager.jpg' },
     {firstName: 'Angela', lastName: 'Lopez', role:'Social Media Manager', picture: 'angela-lopez-social-media-manager.jpg' },
     {firstName: 'Scott', lastName: 'Estrada', role:'Developer  ', picture: 'scott-estrada-developer.jpg' },
-    {firstName: 'Barbara', lastName: 'Ramos', role:'Graphic Designer', picture: 'barbara-ramos-graphic-designer.jpg  */' },
+    {firstName: 'Barbara', lastName: 'Ramos', role:'Graphic Designer', picture: 'barbara-ramos-graphic-designer.jpg' },
 ];
 
 //stampiamo in console le informazioni sottoforma di stringa
@@ -56,17 +56,16 @@ let items='';
 
 for(let i = 0 ; i < team.length ; i++) {
    let teamMember = team[i];
-    console.log(` 
+ /*    console.log(` 
         ${teamMember.firstName} ${teamMember.lastName}
         Role : ${teamMember.role}
         ${teamMember.picture} `
-        );
+        ); */
         
         //# Prepare Data to Send
 
         //preparo i nomi dei membri del team
         const fullname = `${teamMember['firstName']} ${teamMember['lastName']}`;
-        console.log(fullname)
         
         //preparo i ruoli dei membri del team
         const memberRole = teamMember['role'];
@@ -80,11 +79,12 @@ for(let i = 0 ; i < team.length ; i++) {
             <h3> ${fullname} </h3>
             <h4> Ruolo: ${memberRole} </h4>
             <h5> ${memberPicture} </h5>
-        </li>`;
-        //# Output Phase
-        //stampiamo nel DOM sempre sottoforma di stringa
+        </li> `;
         
     }
     
     console.log(items)
+    //# Output Phase
+    //stampiamo nel DOM sempre sottoforma di stringa
     teamListField.innerHTML = items;
+    
