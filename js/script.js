@@ -29,9 +29,14 @@ Barbara Ramos |	Graphic Designer     |	barbara-ramos-graphic-designer.jpg  */
 //stampiamo in console le informazioni sottoforma di stringa
 //stampiamo nel DOM sempre sottoforma di stringa
 
+
+//# Preparation Phase
+
 //recuperiamo gli elementi dal DOM 
 
 const teamListField = document.getElementById('team-list');
+
+//# Elaboration Phase
 
 //creiamo un array
 const team = [
@@ -47,11 +52,39 @@ const team = [
 
 //stampiamo in console le informazioni sottoforma di stringa
 
-for(let i = 0 ; i < team.length ; i++) {
-    let teamMember = team[i];
-    console.log(` 
-        ${teamMember.picture}
-        ${teamMember.firstName} ${teamMember.lastName}
-        Role : ${teamMember.role} `);
-}
+let items='';
 
+for(let i = 0 ; i < team.length ; i++) {
+   let teamMember = team[i];
+    console.log(` 
+        ${teamMember.firstName} ${teamMember.lastName}
+        Role : ${teamMember.role}
+        ${teamMember.picture} `
+        );
+        
+        //# Prepare Data to Send
+
+        //preparo i nomi dei membri del team
+        const fullname = `${teamMember['firstName']} ${teamMember['lastName']}`;
+        console.log(fullname)
+        
+        //preparo i ruoli dei membri del team
+        const memberRole = teamMember['role'];
+        
+        //preparo le immagini dei memmbri del team
+        const memberPicture = teamMember['picture'];
+
+        //assemblo i dati
+        items += `
+        <li>
+            <h3> ${fullname} </h3>
+            <h4> Ruolo: ${memberRole} </h4>
+            <h5> ${memberPicture} </h5>
+        </li>`;
+        //# Output Phase
+        //stampiamo nel DOM sempre sottoforma di stringa
+        
+    }
+    
+    console.log(items)
+    teamListField.innerHTML = items;
