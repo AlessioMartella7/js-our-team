@@ -10,14 +10,30 @@
 body{
     font-family:'Rubik Mono One', sans-serif;
 }
-
-/* Utilities */
-
-.container{
-    max-width: 1000px;
-    margin: 0 auto;
+h1 {
+    font-size: 48px;
+    font-weight: 800;
+    text-shadow: 2px 3px 4px #00df6b47
 }
 
-li {
-    list-style-type: none;
+h3 {
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 12px;
+    font-weight: 600;
+}
+/* Utilities */
+
+
+/* cards  */
+.card {
+    box-shadow: 0px 0px 10px 6px #8279bd30;
+}
+
+
+.card:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }

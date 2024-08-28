@@ -1,29 +1,3 @@
-/* Utilizzando i dati forniti, creare un array di oggetti per rappresentare i membri del team.
-Ogni membro è caratterizzato dalle seguenti informazioni: nome, ruolo e foto.
-MILESTONE 0:
-Creare l’array di oggetti con le informazioni fornite.
-MILESTONE 1:
-Stampare su console le informazioni di nome, ruolo e la stringa della foto
-MILESTONE 2:
-Stampare le stesse informazioni su DOM sottoforma di stringhe
-BONUS 1:
-Trasformare la stringa foto in una immagine effettiva
-BONUS 2:
-Organizzare i singoli membri in card/schede (allego qualche immagine per darvi ispirazione
-Consigli del giorno:
-Ragioniamo come sempre a step.
-Prima la logica in italiano e poi traduciamo in codice.
-E ricordiamoci che console.log() è nostro amico!
-Buon lavoro!
- # DATI
-Wayne Barnett |	Founder & CEO        |	wayne-barnett-founder-ceo.jpg
-Angela Caroll |	Chief Editor         |	angela-caroll-chief-editor.jpg
-Walter Gordon |	Office Manager       |	walter-gordon-office-manager.jpg
-Angela Lopez  |	Social Media Manager |	angela-lopez-social-media-manager.jpg
-Scott Estrada |	Developer            |	scott-estrada-developer.jpg
-Barbara Ramos |	Graphic Designer     |	barbara-ramos-graphic-designer.jpg  */
-
-
 //recuperiamo gli elementi dal DOM 
 //creiamo un array
 //stampiamo in console le informazioni sottoforma di stringa
@@ -57,11 +31,11 @@ let items='';
 
 for(let i = 0 ; i < team.length ; i++) {
    let teamMember = team[i];
- /*    console.log(` 
+    console.log(` 
         ${teamMember.firstName} ${teamMember.lastName}
         Role : ${teamMember.role}
         ${teamMember.picture} `
-        ); */
+        );
         
         //# Prepare Data to Send
 
@@ -76,15 +50,23 @@ for(let i = 0 ; i < team.length ; i++) {
 
         //assemblo i dati
         items += `
-        <li>
-            <h3> ${fullname} </h3>
-            <h4> Ruolo: ${memberRole} </h4>
-            <img src= "../img/${memberPicture}" alt ="${fullname} - picture ">
-        </li> `;
+
+          <div class="col-12 col-sm-6 col-md-4 col-xxl-2">
+            <div class="card" style="width: 18rem;">
+                <img src="../img/${memberPicture}" class="card-img-top" alt="${fullname} - picture ">
+                <div class="card-body">
+                    <p class="card-text">
+                        <h3> ${fullname} </h3>
+                        <h4> Ruolo: ${memberRole} </h4>
+                    </p>
+                </div>
+            </div> 
+          </div> `;
         
     }
 
     //# Output Phase
     //stampiamo nel DOM sempre sottoforma di stringa
     teamListField.innerHTML = items;
+    
     
